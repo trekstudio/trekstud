@@ -1,19 +1,9 @@
 ---
 import { Icon } from 'astro-icon'
 ---
-<!-- <link href="src/assets/styles/search.css" rel="stylesheet"> -->
-<!-- <script src="src/search/pagefind-ui.js" type="text/javascript"></script> -->
-<!-- <div id="search" ></div>
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    new PagefindUI({ element: '#search' });
-  });
-</script> -->
 
 <input id="search" class="h-14 pr-8 pl-5 rounded z-0 border border-solid border-neutral-300 bg-transparent bg-clip-padding utline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary" type="text" placeholder="Search...">
-
 <div id="results" class="fixed bg-white dark:bg-black w-full left-0"/>
-
 <script is:inline>
   document.querySelector('#search')?.addEventListener('input', async (e) => {
     // only load the pagefind script once
@@ -33,7 +23,7 @@ import { Icon } from 'astro-icon'
     for (const result of search.results) {
       const data = await result.data()
       document.querySelector('#results').innerHTML += `
-      <div class="m-4 p-5 bg-white dark:bg-black">
+      <div class="m-4 p-5 bg-white dark:bg-grey-900">
         <div class="flex justify-between">
           <img class="w-3/12" src="${data.meta.image}">
           <p class="p-5">
