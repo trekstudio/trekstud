@@ -20,7 +20,7 @@ import { Icon } from 'astro-icon'
     if (e.target.dataset.loaded !== 'true') {
       e.target.dataset.loaded = 'true'
       // load the pagefind script
-      window.pagefind = await import("/search/pagefind.js");
+      window.pagefind = await import("/src/search/pagefind.js");
     }
 
     // search the index using the input value
@@ -33,10 +33,10 @@ import { Icon } from 'astro-icon'
     for (const result of search.results) {
       const data = await result.data()
       document.querySelector('#results').innerHTML += `
-      <div class="m-4 p-5 bg-white leading-relaxed">
+      <div class="m-4 p-5 bg-white dark:bg-black">
         <div class="flex justify-between">
           <img class="w-3/12" src="${data.meta.image}">
-          <p>
+          <p class="p-5">
             <a class="inline text-primary" href="${data.url}">
               ${data.meta.title}
             </a>
