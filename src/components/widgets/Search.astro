@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon'
 ---
 
 <input id="search" class="h-14 pr-8 pl-5 rounded z-0 border border-solid border-neutral-300 bg-transparent bg-clip-padding utline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary" type="text" placeholder="Search...">
-<div id="results" class="fixed bg-white dark:bg-black w-full left-0"/>
+<div id="results" class="fixed bg-white dark:bg-gray-900 w-full left-0"/>
 <script is:inline>
   document.querySelector('#search')?.addEventListener('input', async (e) => {
     // only load the pagefind script once
@@ -30,7 +30,11 @@ import { Icon } from 'astro-icon'
             <a class="inline text-primary" href="${data.url}">
               ${data.meta.title}
             </a>
-          ${data.excerpt}
+          ${data.excerpt} 
+          <br>
+           <a class="btn py-1 mt-2 text-primary" href="${data.url}">
+             click to read.
+           </a>
           </p>
         </div>
       </div>`
