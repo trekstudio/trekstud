@@ -20,7 +20,7 @@ import { Icon } from 'astro-icon'
     if (e.target.dataset.loaded !== 'true') {
       e.target.dataset.loaded = 'true'
       // load the pagefind script
-      window.pagefind = await import("src/search/pagefind.js");
+      window.pagefind = await import("/search/pagefind.js");
     }
 
     // search the index using the input value
