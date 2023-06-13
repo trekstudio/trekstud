@@ -34,8 +34,8 @@ import { Icon } from 'astro-icon'
       const data = await result.data()
       document.querySelector('#results').innerHTML += `
       <div class="m-4 p-5 bg-white">
-        <p>
-          <img class="inline" src="${data.meta.image}">
+        <p class="display-block">
+          <img class="inline w-3/12" src="${data.meta.image}">
           <a class="text-primary" href="${data.url}">
             ${data.meta.title}
           </a>
