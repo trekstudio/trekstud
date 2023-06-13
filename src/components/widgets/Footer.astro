@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
-import { SITE } from '~/config.mjs';
+import { SITE } from '~/config.mjs'
+import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
@@ -23,7 +24,7 @@ export interface Props {
   theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const { showToggleTheme = true, socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative']}>
@@ -32,6 +33,8 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
       {
         socialLinks?.length ? (
           <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+
+            <li>{showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}</li>
             {socialLinks.map(({ ariaLabel, href, text, icon }) => (
               <li>
                 <a

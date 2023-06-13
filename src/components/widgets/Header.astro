@@ -4,6 +4,9 @@ import Logo from '~/components/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 
+
+import Search from '~/components/widgets/Search.astro';
+
 import { getHomePermalink, getAsset } from '~/utils/permalinks';
 
 interface Link {
@@ -35,12 +38,11 @@ const {
   actions = [],
   isSticky = false,
   showToggleTheme = false,
-  showRssFeed = false,
   position = 'center',
 } = Astro.props;
 ---
 
-<header
+<header 
   class:list={[
     { sticky: isSticky, relative: !isSticky },
     'top-0 z-40 flex-none mx-auto w-full transition-all ease-in-out duration-100',
@@ -95,15 +97,19 @@ const {
         }
       </ul>
     </nav>
-    <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
+    <!-- <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
       <div class="items-center md:flex">
-        {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
       <div class="relative">
         <input type="text" class="h-14 pr-8 pl-5 rounded z-0 border border-solid border-neutral-300 bg-transparent bg-clip-padding utline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary" placeholder="Search anything...">
           <div class="absolute top-4 right-3">
             <Icon name='tabler:search' class="w-5 h-6" />
           </div>
         </div>   
+      </div>
+    </div> -->
+    <div class="items-center md:flex">
+      <div class="relative">
+        <Search />
       </div>
     </div>
   </div>
