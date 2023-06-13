@@ -23,7 +23,7 @@ import { Icon } from 'astro-icon'
     for (const result of search.results) {
       const data = await result.data()
       document.querySelector('#results').innerHTML += `
-      <div class="m-4 p-5 bg-white dark:bg-grey-900">
+      <div class="m-4 p-5 bg-white dark:bg-gray-900">
         <div class="flex justify-between">
           <img class="w-3/12" src="${data.meta.image}">
           <p class="p-5">
