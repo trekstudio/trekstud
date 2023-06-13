@@ -33,14 +33,16 @@ import { Icon } from 'astro-icon'
     for (const result of search.results) {
       const data = await result.data()
       document.querySelector('#results').innerHTML += `
-      <div class="m-4 p-5 bg-white">
-        <p class="display-block">
-          <img class="inline w-3/12" src="${data.meta.image}">
-          <a class="text-primary" href="${data.url}">
-            ${data.meta.title}
-          </a>
+      <div class="m-4 p-5 bg-white leading-relaxed">
+        <div class="flex justify-between">
+          <img class="w-3/12" src="${data.meta.image}">
+          <p>
+            <a class="inline text-primary" href="${data.url}">
+              ${data.meta.title}
+            </a>
           ${data.excerpt}
-        </p>
+          </p>
+        </div>
       </div>`
      
     }
