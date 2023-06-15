@@ -10,7 +10,7 @@ import { Icon } from 'astro-icon'
     if (e.target.dataset.loaded !== 'true') {
       e.target.dataset.loaded = 'true'
       // load the pagefind script
-      window.pagefind = await import("/search/pagefind.js");
+      window.pagefind = await import(import.meta.env.SEARCH_SCRIPT);
     }
 
     // search the index using the input value
@@ -19,25 +19,50 @@ import { Icon } from 'astro-icon'
     // clear the old results
     document.querySelector('#results').innerHTML = ''
 
+// <img class="max-w-sm" src="${data.meta.image}">
+
     // add the new results
     for (const result of search.results) {
       const data = await result.data()
       document.querySelector('#results').innerHTML += `
-      <div class="m-4 p-5 bg-white dark:bg-gray-900">
-        <div class="flex justify-between">
-          <img class="w-3/12" src="${data.meta.image}">
-          <p class="p-5">
-            <a class="inline text-primary" href="${data.url}">
-              ${data.meta.title}
-            </a>
-          ${data.excerpt} 
-          <br>
-           <a class="btn py-1 mt-2 text-primary" href="${data.url}">
-             click to read.
-           </a>
-          </p>
+      <section class="relative md:-mt-[76px]">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+          <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8">
+            <div class="basis-1/2 text-center lg:text-left pb-10 md:pb-16 mx-auto">
+              <h3
+                class="text-2xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+                ${data.meta.title}
+              </h3>
+              
+              <div class="max-w-3xl mx-auto lg:max-w-none">
+                <p class="text-xl text-muted mb-6 dark:text-slate-300">
+                  ${data.excerpt}
+                </p>
+                <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 lg:justify-start lg:m-0 lg:max-w-7xl">
+                   <div class="flex w-full sm:w-auto">
+                      <a class="btn btn-primary sm:mb-0 w-full" 
+                        href="${data.url}" target="_blank" rel="noopener">
+                        Continue the article
+                        <Icon name='tabler:arrow-right' class="w-5 h-5 ml-1 -mr-1.5" />
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basis-1/2">
+              <div class="relative m-auto max-w-5xl">
+                <img
+                    class="mx-auto rounded-md w-full"
+                    src="https://tecdn.b-cdn.net/img/new/standard/city/041.jpg"
+                    alt="${data.meta.title}"
+                  />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>`
+      </section>`
      
     }
   })
