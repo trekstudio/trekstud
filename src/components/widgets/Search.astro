@@ -25,14 +25,14 @@ import { Icon } from 'astro-icon'
     for (const result of search.results) {
       const data = await result.data()
       document.querySelector('#results').innerHTML += `
-      <section class="relative md:-mt-[76px]">
+      <section class="relative md:-mt-[60px]">
         <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-          <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+          <div class="pt-0 md:pt-[60px] pointer-events-none"></div>
           <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8">
             <div class="basis-1/2 text-center lg:text-left pb-10 md:pb-16 mx-auto">
               <h3
-                class="text-2xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+                class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
                 ${data.meta.title}
               </h3>
               
