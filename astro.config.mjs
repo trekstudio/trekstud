@@ -1,70 +1,47 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
+import image from "@astrojs/image";
+import mdx from "@astrojs/mdx";
+import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
+import AutoImport from "astro-auto-import";
+import { defineConfig } from "astro/config";
+import remarkCollapse from "remark-collapse";
+import remarkToc from "remark-toc";
+import config from "./src/config/config.json";
 
-import { defineConfig } from 'astro/config';
+import partytown from "@astrojs/partytown";
+import Compress from "astro-compress";
 
-import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
-import image from '@astrojs/image';
-import mdx from '@astrojs/mdx';
-import partytown from '@astrojs/partytown';
-import compress from 'astro-compress';
-import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
-
-import { SITE } from './src/config.mjs';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const whenExternalScripts = (items = []) =>
-  SITE.googleAnalyticsId ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
-
+// https://astro.build/config
 export default defineConfig({
-  site: SITE.origin,
-  base: SITE.basePathname,
-  trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-
-  output: 'static',
-
-  markdown: {
-    remarkPlugins: [readingTimeRemarkPlugin],
-  },
-
-  integrations: [
-    tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
-    sitemap(),
-    image({
-      serviceEntryPoint: '@astrojs/image/sharp',
-    }),
-    mdx(),
-
-    ...whenExternalScripts(() =>
-      partytown({
-        config: { forward: ['dataLayer.push'] },
-      })
-    ),
-
-    compress({
-      css: true,
-      html: {
-        removeAttributeQuotes: false,
-      },
-      img: false,
-      js: true,
-      svg: false,
-
-      logger: 1,
-    }),
+  site: config.site.base_url ? config.site.base_url : "http://trekstud.io",
+  base: config.site.base_path ? config.site.base_path : "/",
+  trailingSlash: config.site.trailing_slash ? "always" : "never",
+  integrations: [react(), sitemap(), tailwind({
+    config: {
+      applyBaseStyles: false
+    }
+  }), image({
+    serviceEntryPoint: "@astrojs/image/sharp"
+  }), AutoImport({
+    imports: ["@/shortcodes/Button", "@/shortcodes/Accordion", "@/shortcodes/Notice", "@/shortcodes/Video", "@/shortcodes/Youtube", "@/shortcodes/Tabs", "@/shortcodes/Tab"]
+  }),
+  mdx(), partytown(), Compress({
+      CSS: false,
+      HTML: true,
+      Image: false,
+      JavaScript: false,
+      SVG: false,
+    })
   ],
-
-  vite: {
-    resolve: {
-      alias: {
-        '~': path.resolve(__dirname, './src'),
-      },
+  markdown: {
+    remarkPlugins: [remarkToc, [remarkCollapse, {
+      test: "Table of contents"
+    }]],
+    shikiConfig: {
+      theme: "one-dark-pro",
+      wrap: true
     },
-  },
+    extendDefaultPlugins: true
+  }
 });

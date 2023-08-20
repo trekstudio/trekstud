@@ -1,0 +1,38 @@
+{
+  "main": [
+    {
+      "name": "Backpacking",
+      "url": "/categories/backpacking"
+    },
+    {
+      "name": "Camping",
+      "url": "/categories/camping"
+    },
+    {
+      "name": "Kayaking",
+      "url": "/categories/kayaking"
+    },
+    {
+      "name": "Gear",
+      "url": "/tags/gear"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Blog",
+      "url": "/blog"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Privacy Policy",
+      "url": "/privacy-policy"
+    },
+    {
+      "name": "RSS",
+      "url": "/rss.xml"
+    }
+  ]
+}

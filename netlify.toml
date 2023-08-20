@@ -1,7 +1,6 @@
 [build]
-  publish = "dist"
-  command = "npm run build"
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+publish = "dist"
+command = "pnpm build"
+
+[build.environment]
+NODE_VERSION = "18"

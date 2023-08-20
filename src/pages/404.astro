@@ -1,26 +1,27 @@
 ---
-import Layout from '~/layouts/BaseLayout.astro';
-import { getHomePermalink } from '~/utils/permalinks';
-
-const title = `Error 404`;
+import Base from "@/layouts/Base.astro";
 ---
 
-<Layout meta={{ title }}>
-  <section class="flex items-center h-screen md:p-10 lg:p-20">
-    <div class="h-full w-full bg-[url('/404.webp')]">
-      <div class="container flex flex-col items-center justify-center px-5 mx-auto m-8">
-        <div class="max-w-md text-center">
-          <h2 class="mb-8 font-bold text-9xl">
-            <span class="sr-only">Error</span>
-            <span class="text-primary [text-shadow:_2px_2px_0_rgb(255_255_255_/_100%)]">404</span>
-          </h2>
-          <p class="text-3xl font-semibold md:text-3xl text-black [text-shadow:_1px_1px_0_rgb(255_255_255_/_100%)]">Sorry, there's nothing here.</p>
-          <p class="mt-4 mb-8 text-lg text-muted dark:text-black [text-shadow:_1px_1px_0_rgb(255_255_255_/_100%)]">
-            But dont worry, you can find plenty of other things on our homepage.
-          </p>
-          <a rel="noopener noreferrer" href={getHomePermalink()} class="btn !text-white ml-4">Back to homepage</a>
+<Base title="Page Not Found">
+  <section class="section-sm text-center">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="sm:col-10 md:col-8 lg:col-6">
+          <span
+            class="text-[8rem] block font-bold text-dark dark:text-darkmode-dark"
+          >
+            404
+          </span>
+          <h1 class="h2 mb-4">Page not found</h1>
+          <div class="content">
+            <p>
+              The page you are looking for might have been removed, had its name
+              changed, or is temporarily unavailable.
+            </p>
+          </div>
+          <a href="/" class="btn btn-primary mt-8">Back to home</a>
         </div>
       </div>
     </div>
   </section>
-</Layout>
+</Base>

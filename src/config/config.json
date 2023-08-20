@@ -1,0 +1,53 @@
+{
+  "site": {
+    "title": "trekstud.io",
+    "base_url": "https://trekstud.io",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_darkmode": "/images/logo-darkmode.png",
+    "logo_width": "150",
+    "logo_height": "30",
+    "logo_text": "trekstud.io"
+  },
+
+  "metaSite": {
+    "title": "trekstud.io",
+    "description": "I'm a Landscape Photographer, backpacking enthusiast, and all around gear nerd.",
+    "base_url": "https://trekstud.io"
+  },
+
+  "settings": {
+    "search": true,
+    "sticky_header": true,
+    "theme_switcher": true,
+    "default_theme": "system",
+    "pagination": 4,
+    "summary_length": 200,
+    "blog_folder": "blog"
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "Designed And Developed by [Trek Studio](https://trek.studio)"
+  },
+
+  "navigation_button": {
+    "enable": false,
+    "label": "Get Started",
+    "link": "https://github.com/zeon-studio/astroplate"
+  },
+
+  "disqus": {
+    "enable": true,
+    "shortname": "themefisher-template",
+    "settings": {}
+  },
+
+  "metadata": {
+    "meta_author": "trek.studio",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "A blog about my backpacking adventures kayaking trips backcountry camping bushcraft survival and all the gear that goes with. Read gear reviews and latest posts"
+  }
+}

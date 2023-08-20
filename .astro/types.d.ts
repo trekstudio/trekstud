@@ -20,7 +20,9 @@ declare module 'astro:content' {
 
 declare module 'astro:content' {
 	export { z } from 'astro/zod';
-	export type CollectionEntry<C extends keyof AnyEntryMap> = AnyEntryMap[C][keyof AnyEntryMap[C]];
+
+	type Flatten<T> = T extends { [K: string]: infer U } ? U : never;
+	export type CollectionEntry<C extends keyof AnyEntryMap> = Flatten<AnyEntryMap[C]>;
 
 	// TODO: Remove this when having this fallback is no longer relevant. 2.3? 3.0? - erika, 2023-04-04
 	/**
@@ -198,76 +200,172 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"post": {
+		"about": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
+  body: string;
+  collection: "about";
+  data: any
+} & { render(): Render[".md"] };
+};
+"authors": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
+  body: string;
+  collection: "authors";
+  data: InferEntrySchema<"authors">
+} & { render(): Render[".md"] };
+"john-doe.md": {
+	id: "john-doe.md";
+  slug: "john-doe";
+  body: string;
+  collection: "authors";
+  data: InferEntrySchema<"authors">
+} & { render(): Render[".md"] };
+"sam-wilson.md": {
+	id: "sam-wilson.md";
+  slug: "sam-wilson";
+  body: string;
+  collection: "authors";
+  data: InferEntrySchema<"authors">
+} & { render(): Render[".md"] };
+"william-jacob.md": {
+	id: "william-jacob.md";
+  slug: "william-jacob";
+  body: string;
+  collection: "authors";
+  data: InferEntrySchema<"authors">
+} & { render(): Render[".md"] };
+};
+"blog": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "10-essential-camping-gear-beginners.md": {
 	id: "10-essential-camping-gear-beginners.md";
   slug: "10-essential-camping-gear-beginners";
   body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"backpacking- terminology.md": {
+	id: "backpacking- terminology.md";
+  slug: "backpacking--terminology";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "backpacking-encountering-wildlife.md": {
 	id: "backpacking-encountering-wildlife.md";
   slug: "backpacking-encountering-wildlife";
   body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "backpacking-safety.md": {
 	id: "backpacking-safety.md";
   slug: "backpacking-safety";
   body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "backpacking_photography.md": {
 	id: "backpacking_photography.md";
   slug: "backpacking_photography";
   body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "camping-on-a-budget.md": {
 	id: "camping-on-a-budget.md";
   slug: "camping-on-a-budget";
   body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "choosing-the-perfect-campsite.md": {
 	id: "choosing-the-perfect-campsite.md";
   slug: "choosing-the-perfect-campsite";
   body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "eco-friendly-kayak-camping.md": {
 	id: "eco-friendly-kayak-camping.md";
   slug: "eco-friendly-kayak-camping";
   body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "kayak-camping-destinations.md": {
 	id: "kayak-camping-destinations.md";
   slug: "kayak-camping-destinations";
   body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "solo-camping.md": {
 	id: "solo-camping.md";
   slug: "solo-camping";
   body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "stay-motivated-backpacking.md": {
 	id: "stay-motivated-backpacking.md";
   slug: "stay-motivated-backpacking";
   body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+};
+"contact": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
+  body: string;
+  collection: "contact";
+  data: any
+} & { render(): Render[".md"] };
+};
+"homepage": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
+  body: string;
+  collection: "homepage";
+  data: any
+} & { render(): Render[".md"] };
+};
+"pages": {
+"privacy-policy.md": {
+	id: "privacy-policy.md";
+  slug: "privacy-policy";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
+};
+"sections": {
+"call-to-action.md": {
+	id: "call-to-action.md";
+  slug: "call-to-action";
+  body: string;
+  collection: "sections";
+  data: any
+} & { render(): Render[".md"] };
+"testimonial.md": {
+	id: "testimonial.md";
+  slug: "testimonial";
+  body: string;
+  collection: "sections";
+  data: any
 } & { render(): Render[".md"] };
 };
 

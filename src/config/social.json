@@ -1,0 +1,24 @@
+{
+  "main": [
+    {
+      "name": "youtube",
+      "icon": "FaYoutube",
+      "link": "https://www.youtube.com/@trekstud"
+    },
+    {
+      "name": "instagram",
+      "icon": "FaInstagram",
+      "link": "https://www.instagram.com/trekstud"
+    },
+    {
+      "name": "twitter",
+      "icon": "FaX",
+      "link": "https://x.com/trekstud"
+    },
+    {
+      "name": "facebook",
+      "icon": "FaFacebook",
+      "link": "https://www.facebook.com/trekstud"
+    }
+  ]
+}
