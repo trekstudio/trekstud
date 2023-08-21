@@ -27,7 +27,11 @@
       "url": "/about"
     },
     {
-      "name": "Privacy Policy",
+      "name": "Contact",
+      "url": "/contact"
+    },
+    {
+      "name": "Privacy",
       "url": "/privacy-policy"
     },
     {
