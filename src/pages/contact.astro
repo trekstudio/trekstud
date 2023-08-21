@@ -1,11 +1,11 @@
 ---
-import config from "@/config/config.json";
+// import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import PageHeader from "@/partials/PageHeader.astro";
 import { getEntryBySlug } from "astro:content";
 
 const contact = await getEntryBySlug("contact", "-index");
-const { contact_form_action }: { contact_form_action: string } = config.params;
+// const { contact_form_action }: { contact_form_action: string } = config.params;
 const { title, description, meta_title, image } = contact.data;
 ---
 
@@ -29,8 +29,9 @@ const { title, description, meta_title, image } = contact.data;
             onSubmit="submit"
           >
           <input 
+            id="bot-fields"
+            name="bot-field"
             class="hidden" 
-            name="bot-field" 
             type="text"
           />
             <div class="mb-6">
@@ -55,6 +56,18 @@ const { title, description, meta_title, image } = contact.data;
                 class="form-input"
                 placeholder="john.doe@email.com"
                 type="email"
+              />
+            </div>
+            <div class="mb-6">
+              <label for="subject" class="form-label">
+                Why are you here? <span class="text-red-500">*</span>
+              </label>
+              <input
+                id="subject"
+                name="subject"
+                class="form-input"
+                placeholder="Want to collaborate or looking for an ambasador"
+                type="text"
               />
             </div>
             <div class="mb-6">

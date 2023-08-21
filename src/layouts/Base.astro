@@ -142,14 +142,10 @@ const { title, meta_title, description, image, noindex, canonical } =
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-ZLPHPFMJPH"></script>
     <script type="text/partytown">
-      (function(){const id = "G-ZLPHPFMJPH";
-        window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            window.dataLayer.push(arguments);
-          }
-          gtag("js", new Date());
-          gtag("config", id);
-        })();
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZLPHPFMJPH');
     </script>
   </head>
   <body>
