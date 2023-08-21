@@ -1,0 +1,37 @@
+---
+// import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getEntryBySlug } from "astro:content";
+
+const contact = await getEntryBySlug("contact", "-index");
+const { title, description, meta_title, image } = contact.data;
+const call_to_action = await getEntryBySlug("sections", "call-to-action");
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <PageHeader title={title} />
+  <section class="section-sm">
+    <div class="container">
+      <div class="row items-center justify-center">
+        <div class="mb-6 mb:md-0 md:col-5 md:order-1">
+          <img class="rounded" alt="thanks" decoding="async" height="480" loading="lazy" src="/images/thanks.webp" width="520" background="rgba(0,0,0,0)" fit="contain">
+        </div>
+        <div class="lg:col-6 md:col-7 md:order-2">
+          <h2 class="mb-4">Thank You!</h2>
+          <p class="mb-8 text-lg">
+            Your submission has been recieved.
+          </p>
+          <a href="/" class="btn btn-primary mt-5">Back Home ➜</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<CallToAction call_to_action={call_to_action} />
+</Base>
