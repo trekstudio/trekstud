@@ -217,9 +217,9 @@ declare module 'astro:content' {
   collection: "authors";
   data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
-"john-doe.md": {
-	id: "john-doe.md";
-  slug: "john-doe";
+"damien-wright.md": {
+	id: "damien-wright.md";
+  slug: "damien-wright";
   body: string;
   collection: "authors";
   data: InferEntrySchema<"authors">
@@ -231,9 +231,9 @@ declare module 'astro:content' {
   collection: "authors";
   data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
-"william-jacob.md": {
-	id: "william-jacob.md";
-  slug: "william-jacob";
+"trek-stud.md": {
+	id: "trek-stud.md";
+  slug: "trek-stud";
   body: string;
   collection: "authors";
   data: InferEntrySchema<"authors">
