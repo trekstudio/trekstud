@@ -2,6 +2,7 @@
 title: Choosing the Perfect Campsite
 description: Selecting an ideal campsite is a crucial element of any outdoor adventure. It can greatly impact your camping experience, providing comfort, convenience
 author: Trek Stud
+author: Trek Stud
 date: 2022-08-27T00:00:00.000Z
 image: /images/blog/camping-tent-forest-tree.webp
 categories:

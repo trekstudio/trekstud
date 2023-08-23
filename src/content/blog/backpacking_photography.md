@@ -1,7 +1,7 @@
 ---
 title: Backpacking Photography - Capturing Stunning Moments on the Trail
 description: Backpacking not only offers a thrilling adventure but also presents incredible opportunities for capturing breathtaking photographs.
-author: Trek Strud
+author: Trek Stud
 date: 2022-08-20T00:00:00.000Z
 image: /images/blog/backpacking_photography.webp
 categories:

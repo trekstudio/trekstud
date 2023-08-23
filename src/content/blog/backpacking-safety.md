@@ -2,6 +2,7 @@
 title: Backpacking Safety
 description: Essential Tips for Staying Safe in the Wilderness
 excerpt: Backpacking offers an incredible opportunity to explore the beauty of nature, but it's important to prioritize safety during your wilderness adventures. 
+author: Trek Stud
 date: 2023-01-26T00:00:00Z
 image: /images/blog/backpacking_adventurer.webp
 categories:

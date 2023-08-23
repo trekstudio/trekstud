@@ -2,6 +2,7 @@
 title: Backpacking Terminology
 description: From 
 excerpt:  ftom
+author: Trek Stud
 date: 2023-06-26T00:00:00Z
 image: /images/blog/backpacking-terminology.jpg
 categories:
