@@ -2,7 +2,7 @@
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
-import Testimonial from "@/partials/Testimonial.astro";
+// import Testimonial from "@/partials/Testimonial.astro";
 import type { Button, Feature } from "@/types";
 import { Image } from "@astrojs/image/components";
 import { getEntryBySlug } from "astro:content";
@@ -21,7 +21,7 @@ interface Homepage {
 }
 
 const homepage = await getEntryBySlug("homepage", "-index");
-const testimonial = await getEntryBySlug("sections", "testimonial");
+// const testimonial = await getEntryBySlug("sections", "testimonial");
 const call_to_action = await getEntryBySlug("sections", "call-to-action");
 const { banner, features }: Homepage = homepage.data;
 

@@ -68,11 +68,11 @@ const Search = ({ searchList }: Props) => {
   }, [inputVal]);
 
   return (
-    <section className="section-sm">
-      <div className="container">
-        <div className="row mb-10 justify-center">
+    <section className="section-sm pb-0">
+      <div className="container mb-20"> 
+        <div className="row justify-center">
           <div className="lg:col-8">
-            <div className="flex flex-nowrap">
+            <div className="flex flex-nowrap mb-10">
               <input
                 className="form-input rounded-r-none"
                 placeholder="Search posts"
@@ -103,11 +103,7 @@ const Search = ({ searchList }: Props) => {
         <div className="row">
           {searchResults?.length < 1 ? (
             <div className="mx-auto pt-5 text-center">
-              <img
-                className="mx-auto mb-6"
-                src="/images/no-search-found.png"
-                alt="no-search-found"
-              />
+
               <h1 className="h2 mb-4">
                 {inputVal.length < 1 ? "Search Post Here" : "No Search Found!"}
               </h1>
@@ -174,8 +170,30 @@ const Search = ({ searchList }: Props) => {
           )}
         </div>
       </div>
-    </section>
+
+
+<div className="mb-0">
+<div className="container p-0">
+  <div className="bg-theme-light px-4 py-16 dark:bg-darkmode-theme-light xl:p-20">
+    <div className="row items-center justify-center">
+      <div className="mb-10 md:col-5 lg:col-4 md:order-2 md:mb-0">
+        <img className="w-full" alt="cta-image" width="520" height="400" src="/_image?f=webp&#38;w=520&#38;h=400&#38;href=%2Fimages%2Fblog%2Fbackpacking-gear.webp" loading="lazy" decoding="async"/>
+      </div>
+      <div className="md:col-7 md:order-1">
+        <h2 className="mb-2">Looking for gear tips and reviews?</h2>
+        <p className="mb-6">Every item of gear has been meticulously crafted to fulfill precise needs and purposes. Discover which gear meets the mark and which ones may fall short. Additionally, I&#39;ll make it a priority to help you find optimal value for your investment and share a handful of trade secrets to enhance your experience.</p>
+        <a className="btn btn-primary" href="/tags/gear">
+            Get Started Now with Gear ➜
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+    
   );
+  
 };
 
 export default Search;
