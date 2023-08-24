@@ -177,7 +177,7 @@ const Search = ({ searchList }: Props) => {
   <div className="bg-theme-light px-4 py-16 dark:bg-darkmode-theme-light xl:p-20">
     <div className="row items-center justify-center">
       <div className="mb-10 md:col-5 lg:col-4 md:order-2 md:mb-0">
-        <img className="w-full" alt="cta-image" width="520" height="400" src="/_image?f=webp&#38;w=520&#38;h=400&#38;href=%2Fimages%2Fblog%2Fbackpacking-gear.webp" loading="lazy" decoding="async"/>
+        <img className="w-full" alt="cta-image" width="520" height="400" src="/images/cta-gear.webp" loading="lazy" decoding="async"/>
       </div>
       <div className="md:col-7 md:order-1">
         <h2 className="mb-2">Looking for gear tips and reviews?</h2>
