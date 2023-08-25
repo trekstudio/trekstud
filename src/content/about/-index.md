@@ -18,7 +18,7 @@ I have been involved in website and graphic design for quite some time now, both
 
 Photography, on the other hand, was more of a serendipitous discovery for me. However, it quickly became an addiction, and now I find myself seeing photo opportunities everywhere I look. Consequently, it was only a matter of time before I decided to establish a photography business and create my own brand. Over time, all my hobbies gradually transformed into income streams, and I must say, it's truly living the dream.
 
-![About](https://trekstud.io/trek_stud_alamden.webp)
+![About](https://trekstud.io/images/trek_stud_alamden.webp)
 
 ## The Mission
 

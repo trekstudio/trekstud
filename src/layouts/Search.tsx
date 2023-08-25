@@ -170,27 +170,25 @@ const Search = ({ searchList }: Props) => {
           )}
         </div>
       </div>
-
-
-<div className="mb-0">
-<div className="container p-0">
-  <div className="bg-theme-light px-4 py-16 dark:bg-darkmode-theme-light xl:p-20">
-    <div className="row items-center justify-center">
-      <div className="mb-10 md:col-5 lg:col-4 md:order-2 md:mb-0">
-        <img className="w-full" alt="cta-image" width="520" height="400" src="/images/cta-gear.webp" loading="lazy" decoding="async"/>
-      </div>
-      <div className="md:col-7 md:order-1">
-        <h2 className="mb-2">Looking for gear tips and reviews?</h2>
-        <p className="mb-6">Every item of gear has been meticulously crafted to fulfill precise needs and purposes. Discover which gear meets the mark and which ones may fall short. Additionally, I&#39;ll make it a priority to help you find optimal value for your investment and share a handful of trade secrets to enhance your experience.</p>
-        <a className="btn btn-primary" href="/tags/gear">
-            Get Started Now with Gear ➜
-          </a>
+    <div className="mb-0">
+      <div className="container p-0">
+        <div className="bg-theme-light px-4 py-16 dark:bg-darkmode-theme-light xl:p-20">
+          <div className="row items-center justify-center">
+            <div className="mb-10 md:col-5 lg:col-4 md:order-2 md:mb-0">
+              <img className="w-full" alt="cta-image" width="520" height="400" src="/images/cta-gear.webp" loading="lazy" decoding="async"/>
+            </div>
+            <div className="md:col-7 md:order-1">
+              <h2 className="mb-2">Looking for gear tips and reviews?</h2>
+              <p className="mb-6">Every item of gear has been meticulously crafted to fulfill precise needs and purposes. Discover which gear meets the mark and which ones may fall short. Additionally, I&#39;ll make it a priority to help you find optimal value for your investment and share a handful of trade secrets to enhance your experience.</p>
+              <a className="btn btn-primary" href="/tags/gear">
+                  Get Started Now with Gear ➜
+                </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
-</section>
+  </section>
     
   );
   
