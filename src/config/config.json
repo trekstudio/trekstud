@@ -4,7 +4,7 @@
     "base_url": "https://trekstud.io",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
+    "favicon": "/favicon.png",
     "logo": "/images/logo.png",
     "logo_darkmode": "/images/logo-darkmode.png",
     "logo_width": "150",
@@ -23,7 +23,7 @@
     "sticky_header": true,
     "theme_switcher": true,
     "default_theme": "system",
-    "pagination": 4,
+    "pagination": 6,
     "summary_length": 200,
     "blog_folder": "blog"
   },
