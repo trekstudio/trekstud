@@ -12,6 +12,7 @@ tags:
   - safety
   - tips
 canonical: https://trekstud.io/blog/backpacking-safety
+draft: false
 ---
 
 ## Backpacking Safety: Essential Tips for Staying Safe in the Wilderness

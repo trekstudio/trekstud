@@ -10,6 +10,7 @@ tags:
   - long-distance
   - motivated
 canonical: https://trekstud.io/blog/stay-motivated-backpacking
+draft: false
 ---
 
 ## How to Stay Motivated on Long-Distance Backpacking Trips

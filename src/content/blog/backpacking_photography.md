@@ -12,6 +12,7 @@ tags:
   - safety
   - trail
 canonical: https://trekstud.io/blog/backpacking_photography
+draft: false
 ---
 
 ## Backpacking Photography: Capturing Stunning Moments on the Trail

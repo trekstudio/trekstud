@@ -10,6 +10,7 @@ tags:
   - gear
   - camping
 canonical: https://trekstud.io/blog/10-essential-camping-gear-beginners
+draft: false
 ---  
 
 ## 10 Essential Camping Gear for Beginners: A Comprehensive Guide

@@ -11,6 +11,7 @@ tags:
   - planning
   - budget
 canonical: https://trekstud.io/blog/camping-on-a-budget
+draft: false
 ---
 
 ## Camping on a Budget: How to Plan an Affordable Outdoor Getaway

@@ -11,6 +11,7 @@ tags:
   - wildlife
   - safety
 canonical: https://trekstud.io/blog/backpacking-encountering-wildlife
+draft: false
 ---
 
 ## Backpacking Safety: Dealing with Wildlife Encounters

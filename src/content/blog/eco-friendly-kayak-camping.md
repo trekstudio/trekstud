@@ -12,6 +12,7 @@ tags:
   - leave no trace
   - eco-friendly
 canonical: https://trekstud.io/blog/eco-friedly-kayak-camping
+draft: false
 ---  
 
 ##  Eco-Friendly Kayak Camping: Promoting Responsible Waste Management
