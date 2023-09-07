@@ -1,7 +1,7 @@
 ---
 title: Backpacking Gear List
-description: A maintaned curated list of backpacking gear 
-excerpt: A maintaned curated list of backpacking gear
+description: An up-to-date, carefully curated compilation of backpacking gear. Every item listed here is either currently in my possession or has been personally tested and used by me in the past.
+excerpt: An up-to-date, carefully curated compilation of backpacking gear. Every item listed here is either currently in my possession or has been personally tested and used by me in the past.
 author: Trek Stud
 date: 2023-08-28T00:00:00Z
 image: /images/blog/backpacking-terminology.jpg
