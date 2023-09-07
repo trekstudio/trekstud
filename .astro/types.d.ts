@@ -215,28 +215,28 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "authors";
-  data: any
+  data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
 "damien-wright.md": {
 	id: "damien-wright.md";
   slug: "damien-wright";
   body: string;
   collection: "authors";
-  data: any
+  data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
 "sam-wilson.md": {
 	id: "sam-wilson.md";
   slug: "sam-wilson";
   body: string;
   collection: "authors";
-  data: any
+  data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
 "trek-stud.md": {
 	id: "trek-stud.md";
   slug: "trek-stud";
   body: string;
   collection: "authors";
-  data: any
+  data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
 };
 "blog": {
@@ -245,91 +245,98 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "10-essential-camping-gear-beginners.md": {
 	id: "10-essential-camping-gear-beginners.md";
   slug: "10-essential-camping-gear-beginners";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"backpacking- gear-list.md": {
+	id: "backpacking- gear-list.md";
+  slug: "backpacking--gear-list";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "backpacking- terminology.md": {
 	id: "backpacking- terminology.md";
   slug: "backpacking--terminology";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "backpacking-encountering-wildlife.md": {
 	id: "backpacking-encountering-wildlife.md";
   slug: "backpacking-encountering-wildlife";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "backpacking-safety.md": {
 	id: "backpacking-safety.md";
   slug: "backpacking-safety";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "backpacking_photography.md": {
 	id: "backpacking_photography.md";
   slug: "backpacking_photography";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "best-kayak-for-kayak-camping.md": {
 	id: "best-kayak-for-kayak-camping.md";
   slug: "best-kayak-for-kayak-camping";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "camping-on-a-budget.md": {
 	id: "camping-on-a-budget.md";
   slug: "camping-on-a-budget";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "choosing-the-perfect-campsite.md": {
 	id: "choosing-the-perfect-campsite.md";
   slug: "choosing-the-perfect-campsite";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "eco-friendly-kayak-camping.md": {
 	id: "eco-friendly-kayak-camping.md";
   slug: "eco-friendly-kayak-camping";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "kayak-camping-destinations.md": {
 	id: "kayak-camping-destinations.md";
   slug: "kayak-camping-destinations";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "solo-camping.md": {
 	id: "solo-camping.md";
   slug: "solo-camping";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "stay-motivated-backpacking.md": {
 	id: "stay-motivated-backpacking.md";
   slug: "stay-motivated-backpacking";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
 "contact": {
@@ -356,7 +363,7 @@ declare module 'astro:content' {
   slug: "privacy-policy";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
 };
 "sections": {
@@ -384,5 +391,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }
