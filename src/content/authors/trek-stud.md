@@ -1,12 +1,12 @@
 ---
 title: Trek Stud
 email: trekstud@email.com
-image: "/images/avatar.png"
+image: "/images/itsme.webp"
 description: this is meta description
 social:
   - name: github
     icon: FaGithub
-    link: https://github.com
+    link: https://github.com/trekstudio
 
   - name: twitter
     icon: FaTwitter
@@ -17,4 +17,4 @@ social:
     link: https://instagram.com/trekstud
 ---
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+**"Trek Stud"** is my trail name. I'm the passionate outdoor enthusiast behind **trekstud.io**, a dynamic guide and valuable resource for backpacking, camping, and kayaking. I have a deep affection for backpacking, exploring new places, practical gear, and everything related to the great outdoors.

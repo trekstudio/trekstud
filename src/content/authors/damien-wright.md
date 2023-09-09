@@ -1,7 +1,7 @@
 ---
 title: Damien Wright
 email: dww510@email.com
-image: "/images/avatar.png"
+image: "/images/ahjumawi_trek_stud.jpg"
 description: this is meta description
 social:
   - name: github
@@ -17,4 +17,4 @@ social:
     link: https://instagram.com/dww510
 ---
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+I'm a landscape photographer <a href="https://trek.studio">@trek_studio</a> that spends most of my days trekking on trails, in the mountains, or kayaking on a river. Im always chasing the shot, but in my spare time I like to blog and vlog on my website <a href="https://trekstud.io">trekstud.io</a>
